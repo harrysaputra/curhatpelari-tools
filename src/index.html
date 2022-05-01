@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-4xl font-bold">curhatpelari</h1>
+    </header>
+    <main class="my-16">
+      <h1 class="text-xl font-bold">Running Pace Recommendation</h1>
+      <p>
+        Enter the time and distance of a recent race, and we will calculate
+        recommended paces for various runs.
+      </p>
+
+      <div class="mt-8 calc-outer-wrap">
+        <div id="form-error" class="my-2 text-sm" style="display: none"></div>
+        <form class="calc-form" id="calc-form">
+          <div class="form-fields">
+            <div class="field-outer col-1">
+              <label for="r-time-m" class="top-label">Race Distance</label>
+              <div class="field-items">
+                <div class="field field-large">
+                  <select id="race" name="race">
+                    <option value=""></option>
+                    <option value="1k">1 km</option>
+                    <option value="3k">3 km</option>
+                    <option value="5k">5 km</option>
+                    <option value="10k">10 km</option>
+                    <option value="halfmarathon">Half Marathon</option>
+                    <option value="marathon">Marathon</option>
+                  </select>
+                </div>
+                <!--  /.field -->
+              </div>
+              <!--  /.field-items -->
+            </div>
+            <!--  /.field-outer -->
+
+            <div class="mt-4 field-outer col-2">
+              <label for="r1" class="top-label">Your Time:</label>
+              <div class="field-items">
+                <div class="field">
+                  <input
+                    type="text"
+                    name="finish-time-hr"
+                    id="finish_time_hr"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="Hour"
+                  />
+                </div>
+                <!--  /.field -->
+                <div class="field">
+                  <input
+                    type="text"
+                    name="finish-time-min"
+                    id="finish_time_min"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="Min"
+                  />
+                </div>
+                <!--  /.field -->
+                <div class="field">
+                  <input
+                    type="text"
+                    name="finish-time-sec"
+                    id="finish_time_sec"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="Sec"
+                  />
+                </div>
+                <!--  /.field -->
+              </div>
+              <!--  /.field-items -->
+            </div>
+            <!--  /.field-outer -->
+
+            <div class="mt-8 btn-wrap field-outer">
+              <button
+                class="px-4 py-2 text-xl font-medium text-white bg-black rounded cursor-pointer form-submit"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+          <!--  /.form fields -->
+        </form>
+        <div id="results" style="display: none"></div>
+      </div>
+      <!--  /.calc-outer-wrap -->
+    </main>
+    <footer>built with love.</footer>
+  </body>
+  <script src="pacecalculator.js"></script>
+</html>

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #d7e953;
+  @apply max-w-md p-6 mx-auto;
+}

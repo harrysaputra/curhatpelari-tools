@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : ""
+        j.async = true
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, "script", "dataLayer", "GTM-595ZVDV")
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-595ZVDV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+      <a href="https://curhatpelari.com"
+        ><img src="logo.webp" alt="curhat pelari" class="h-24"
+      /></a>
+    </header>
+    <main class="my-8">
+      <div id="intro">
+        <h1 class="text-lg font-bold underline">Running Pace Recommendation</h1>
+        <p class="p-4 mt-4 bg-black bg-opacity-10">
+          Input dengan catatan waktu dan jarak lari terbaik kamu saat ini 🏃
+        </p>
+        <p class="mt-4 text-sm">
+          Input dengan jujur, jangan pura-pura dikencengin larinya *pura-pura
+          kenceng cukup di socmed aja*
+        </p>
+        <p class="mt-4 text-sm">
+          Nanti bakal muncul rekomendasi pace lari untuk latihan kamu 😉
+        </p>
+      </div>
+      <div class="mt-8 calc-outer-wrap">
+        <div
+          id="form-error"
+          class="px-3 py-2 my-2 text-xs text-white bg-red-500"
+          style="display: none"
+        ></div>
+        <form class="calc-form" id="calc-form">
+          <div class="form-fields">
+            <div class="field-outer col-1">
+              <label for="r-time-m " class="text-xs font-bold uppercase"
+                >Jarak lari</label
+              >
+              <div class="field-items">
+                <div class="field field-large">
+                  <select id="race" name="race">
+                    <option value=""></option>
+                    <option value="1k">1 km</option>
+                    <option value="3k">3 km</option>
+                    <option value="5k">5 km</option>
+                    <option value="10k">10 km</option>
+                    <option value="halfmarathon">Half Marathon</option>
+                    <option value="marathon">Marathon</option>
+                  </select>
+                </div>
+                <!--  /.field -->
+              </div>
+              <!--  /.field-items -->
+            </div>
+            <!--  /.field-outer -->
+
+            <div class="mt-4 field-outer col-2">
+              <label for="r1" class="text-xs font-bold uppercase top-label"
+                >Waktu terbaikmu:</label
+              >
+              <div class="flex field-items">
+                <div class="field">
+                  <input
+                    type="text"
+                    name="finish-time-hr"
+                    id="finish_time_hr"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="Hour"
+                    class="w-20"
+                  />
+                </div>
+                <!--  /.field -->
+                <div class="field">
+                  <input
+                    type="text"
+                    name="finish-time-min"
+                    id="finish_time_min"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="Min"
+                    class="w-20"
+                  />
+                </div>
+                <!--  /.field -->
+                <div class="field">
+                  <input
+                    type="text"
+                    name="finish-time-sec"
+                    id="finish_time_sec"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="Sec"
+                    class="w-20"
+                  />
+                </div>
+                <!--  /.field -->
+              </div>
+              <!--  /.field-items -->
+            </div>
+            <!--  /.field-outer -->
+
+            <div class="mt-8 btn-wrap field-outer">
+              <button
+                class="px-6 py-3 text-xl font-medium text-white bg-black rounded cursor-pointer form-submit"
+              >
+                ⏱ Calculate
+              </button>
+            </div>
+          </div>
+          <!--  /.form fields -->
+        </form>
+        <div id="results" style="display: none"></div>
+      </div>
+      <!--  /.calc-outer-wrap -->
+    </main>
+    <footer class="mt-16 text-sm">
+      built with ♥
+      <a href="https://curhatpelari.com" class="font-medium">curhatpelari</a>
+    </footer>
+  </body>
+  <script src="pacecalculator.js"></script>
+</html>

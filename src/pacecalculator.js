@@ -139,17 +139,16 @@
     velTempoDisplay,
     velSpeedDisplay,
     velLongDisplay,
-    velYassoDisplay,
   }) {
     results.innerHTML = `
     <h5 class="mb-4 font-bold">Rekomendasi pace lari kamu</h5>
     <div class="flex flex-col space-y-4">
-    <div class="border p-2 border-2 border-black text-lg">${velEasyDisplay}</div> 
-  <div class="border p-2 border-2 border-black text-lg">${velMaxDisplay}</div>
-  <div class="border p-2 border-2 border-black text-lg">${velTempoDisplay}</div>
-  <div class="border p-2 border-2 border-black text-lg">${velSpeedDisplay}</div>
-  <div class="border p-2 border-2 border-black text-lg">${velLongDisplay}</div>
-  <div class="border p-2 border-2 border-black text-lg">${velYassoDisplay}</div>
+    <div class=" p-2 border-2 border-black text-lg">${velEasyDisplay}</div> 
+  <div class=" p-2 border-2 border-black text-lg">${velMaxDisplay}</div>
+  <div class=" p-2 border-2 border-black text-lg">${velTempoDisplay}</div>
+  <div class=" p-2 border-2 border-black text-lg">${velSpeedDisplay}</div>
+  <div class=" p-2 border-2 border-black text-lg">${velLongDisplay}</div>
+  <div class=" p-2 border-2 border-black text-lg">${velYassoDisplay}</div>
   </div>
   
   <a href="#" id="revise" class="mt-8 underline block">Revisi</a>
@@ -193,7 +192,6 @@
     data.velMaximum = VO2ToVel(data.v02Max)
     data.velSpeed = VO2ToVel(data.v02Max * 1.1)
     data.velxlong = VO2ToVel(data.v02Max * 0.6)
-    data.velYasso = data.velMaximum * 1.95
 
     data.velEasyDisplay = `<div class="flex justify-between"><span>Easy run</span><strong>${timeConvert(
       data.velEasy
@@ -209,10 +207,6 @@
     )}</strong></div>`
     data.velLongDisplay = `<div class="flex justify-between"><span>Long run</span><strong> ${timeConvert(
       data.velxlong
-    )}</strong></div>`
-    data.velYassoDisplay = `<div class="flex justify-between"><span>Yasso 800s</span><strong> ${timeConvert(
-      data.velYasso,
-      true
     )}</strong></div>`
 
     //console.log(data);

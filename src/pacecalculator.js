@@ -148,7 +148,6 @@
   <div class=" p-2 border-2 border-black text-lg">${velTempoDisplay}</div>
   <div class=" p-2 border-2 border-black text-lg">${velSpeedDisplay}</div>
   <div class=" p-2 border-2 border-black text-lg">${velLongDisplay}</div>
-  <div class=" p-2 border-2 border-black text-lg">${velYassoDisplay}</div>
   </div>
   
   <a href="#" id="revise" class="mt-8 underline block">Revisi</a>
